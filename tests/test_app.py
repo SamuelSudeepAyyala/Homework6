@@ -1,4 +1,6 @@
-import pytest
+"""
+This module for the REPL functionality of the App class. 
+"""
 from app import App
 
 def test_app_start_exit_command(capfd, monkeypatch):
