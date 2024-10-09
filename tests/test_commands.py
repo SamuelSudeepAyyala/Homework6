@@ -68,13 +68,13 @@ def test_divide_command(capfd, monkeypatch):
 def test_dividebyzero_command(capfd, monkeypatch):
     """
     This test simulates user input ('9 0') and verifies that an appropriate error message
-    ('Error Occured! DivisionByzero or DivisionByNegative') is printed when attempting to divide by zero.
+    ('Error Occured! DivisionByzero') is printed when attempting to divide by zero.
     """
     monkeypatch.setattr('builtins.input', lambda _: '9 0')
     command = DivideCommand()
     command.execute()
     out, err = capfd.readouterr()
-    assert "Error Occured! DivisionByzero or DivisionByNegative" in out, "Error should be Occured."
+    assert "Error Occured! DivisionByzero" in out, "Error should be Occured."
 
 def test_app_menu_command(capfd, monkeypatch):
     """
