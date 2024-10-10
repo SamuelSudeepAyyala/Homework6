@@ -1,4 +1,4 @@
-# Homework5
+# Plugins Architecture - Homework5
 
 This repository implements a plugin-based command handling system in Python. The project demonstrates how to dynamically load and execute commands through a plugin system.
 
@@ -35,6 +35,42 @@ This repository implements a plugin-based command handling system in Python. The
     ```
 
 4. Install any dependencies (if applicable).
+    ```bash
+    pip3 install -r requirements.txt
+    ```
+
+5. **Run the main Python file:**
+    ```bash
+    python main.py
+    ```
+
+6. **Execute a command:**
+    The program will prompt for user input. For example, to add two numbers:
+    ```
+    Type 'menu' to show menu
+    Type 'exit' to exit 
+    >>> menu
+    Welcome to the Basic Calcualator.
+    Select the operation to be performed
+    Add
+    Subtract
+    Multiply
+    Divide
+    >>> add
+    Enter two space-seperated numbers: 23 2
+    Addition result: 25
+    ```
+
+## Running Tests
+
+To run the tests for this project:
+Results are stored in the folder **Results** for the main branch and the child branches.
+
+```bash
+pytest 
+pytest --pylint
+pytest --pylint --cov
+```
 
 ## Usage
 
