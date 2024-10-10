@@ -7,10 +7,10 @@ application will handle input/output correctly, including edge cases like divisi
 """
 import pytest
 from app import App
-from app.commands.add import AddCommand
-from app.commands.subtract import SubtractCommand
-from app.commands.multiply import MultiplyCommand
-from app.commands.divide import DivideCommand
+from app.plugins.add import AddCommand
+from app.plugins.subtract import SubtractCommand
+from app.plugins.multiply import MultiplyCommand
+from app.plugins.divide import DivideCommand
 
 
 def test_add_command(capfd, monkeypatch):
@@ -68,13 +68,13 @@ def test_divide_command(capfd, monkeypatch):
 def test_dividebyzero_command(capfd, monkeypatch):
     """
     This test simulates user input ('9 0') and verifies that an appropriate error message
-    ('Error Occured! DivisionByzero or DivisionByNegative') is printed when attempting to divide by zero.
+    ('Error Occured! DivisionByzero') is printed when attempting to divide by zero.
     """
     monkeypatch.setattr('builtins.input', lambda _: '9 0')
     command = DivideCommand()
     command.execute()
     out, err = capfd.readouterr()
-    assert "Error Occured! DivisionByzero or DivisionByNegative" in out, "Error should be Occured."
+    assert "Error Occured! DivisionByzero" in out, "Error should be Occured."
 
 def test_app_menu_command(capfd, monkeypatch):
     """
