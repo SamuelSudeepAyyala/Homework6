@@ -44,6 +44,33 @@ This repository demonstrates different functionalities split across multiple bra
 
 3. Checkout the desired branch (e.g., `plugins` or `commands`) based on your area of interest.
 
+    ```bash
+    git checkout commands
+    ```
+
+4. **Run the main Python file:**
+    ```bash
+    python main.py
+    ```
+
+5. **Execute a command:**
+    The program will prompt for user input. For example, to add two numbers:
+    ```
+    Type 'menu' to show menu
+    Type 'exit' to exit 
+    >>> menu
+    Welcome to the Basic Calcualator.
+    Select the operation to be performed
+    Add
+    Subtract
+    Multiply
+    Divide
+    >>> add
+    Enter two space-seperated numbers: 23 2
+    Addition result: 25
+    ```
+
+
 ## Usage
 
 To run the project (based on the branch you're on):
@@ -56,4 +83,6 @@ To run tests:
 
 ```bash
 pytest
+pytest --pylint
+pytest --pylint --cov
 ```
