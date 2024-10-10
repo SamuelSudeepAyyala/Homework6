@@ -48,12 +48,17 @@ This repository demonstrates different functionalities split across multiple bra
     git checkout commands
     ```
 
-4. **Run the main Python file:**
+4. Install any dependencies (if applicable).
+    ```bash
+    pip3 install -r requirements.txt
+    ```
+
+5. **Run the main Python file:**
     ```bash
     python main.py
     ```
 
-5. **Execute a command:**
+6. **Execute a command:**
     The program will prompt for user input. For example, to add two numbers:
     ```
     Type 'menu' to show menu
