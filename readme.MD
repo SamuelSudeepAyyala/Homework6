@@ -1,34 +1,20 @@
-# Homework5
+# Plugins Architecture - Homework5
 
-This repository demonstrates different functionalities split across multiple branches. The project includes a plugin-based command handling system and individual command implementations in separate branches.
+This repository implements a plugin-based command handling system in Python. The project demonstrates how to dynamically load and execute commands through a plugin system.
 
 ## Branches
 
-### 1. **master**
-   The main branch of this repository, which contains the base code without the plugin system or command implementations. If you're looking for the core project structure, check out this branch.
+- **master**: The main branch with all the core functionality.
+- **commands**: A branch focused on implementing different command classes.
+- **plugins**: The current branch where the plugin system for command handling is implemented.
 
-### 2. **development**
-   This branch contains work-in-progress code and features that are under active development. New functionalities or fixes are tested here before merging into the `master`.
+## Features
 
-### 3. **plugins**
-   This branch contains the implementation of a **plugin system**. The plugin system allows commands to be loaded dynamically, making the project extensible and modular. If you're interested in the plugin architecture, switch to this branch.
+- **Command Classes**: The project supports various command classes, such as `AddCommand`, which takes user input and returns the addition of two numbers.
+- **Plugin System**: The plugin system dynamically loads and handles commands, allowing for easy extension and customization without modifying the core logic.
+- **Testing**: Includes parameterized test cases to validate the functionality of command classes.
 
-   To check out this branch:
-
-   ```bash
-   git checkout plugins
-   ```
-
-### 4. **commands**
-   This branch focuses on the **command classes** implementation, such as the `AddCommand`, which performs the addition of two numbers. If you are interested in how individual commands are structured and implemented, explore this branch.
-
-   To check out this branch:
-
-   ```bash
-   git checkout commands
-   ```
-
-## Getting Started
+## Installation
 
 1. Clone the repository:
 
@@ -42,10 +28,10 @@ This repository demonstrates different functionalities split across multiple bra
     cd Homework5
     ```
 
-3. Checkout the desired branch (e.g., `plugins` or `commands`) based on your area of interest.
+3. Checkout the `plugins` branch to access the latest plugin system implementation:
 
     ```bash
-    git checkout commands
+    git checkout plugins
     ```
 
 4. Install any dependencies (if applicable).
@@ -75,19 +61,20 @@ This repository demonstrates different functionalities split across multiple bra
     Addition result: 25
     ```
 
+## Running Tests
 
-## Usage
-
-To run the project (based on the branch you're on):
-
-```bash
-python main.py
-```
-
-To run tests:
+To run the tests for this project:
+Results are stored in the folder **Results** for the main branch and the child branches.
 
 ```bash
-pytest
+pytest 
 pytest --pylint
 pytest --pylint --cov
 ```
+
+## Usage
+
+To run the project:
+
+```bash
+python main.py
