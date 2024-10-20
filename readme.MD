@@ -1,6 +1,10 @@
-# Plugins Architecture - Homework5
+# Logging and DevOps - Homework6
 
 This repository implements a plugin-based command handling system in Python. The project demonstrates how to dynamically load and execute commands through a plugin system.
+
+## Features (Updated)
+- **DevOps Integration** : Integrated pytest with the yaml file in the github workflows.
+- **Logging** : Logs operations and test results, enhancing traceability and debugging during the app run in the logs folder.
 
 ## Branches
 
